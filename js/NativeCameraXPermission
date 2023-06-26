@@ -8,5 +8,5 @@ export interface Spec extends TurboModule {
 }
 
 export default TurboModuleRegistry.get<Spec>(
-    'RTNCameraPermission',
+    'RTNCameraX',
 ) as Spec | null;
