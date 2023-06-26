@@ -1,0 +1,39 @@
+{
+  "name": "rtn-camera-permission",
+  "version": "0.0.1",
+  "description": "Add numbers with Turbo Native Modules",
+  "react-native": "js/index",
+  "source": "js/index",
+  "files": [
+    "js",
+    "android",
+    "ios",
+    "rtn-camera-permission.podspec",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "keywords": ["react-native", "ios", "android"],
+  "repository": "https://github.com/archspire-9k/rtn-camera-permission",
+  "author": " dml122@case.edu (https://github.com/archspire-9k)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/archspire-9k/rtn-camera-permission/issues"
+  },
+  "homepage": "https://github.com/archspire-9k/rtn-camera-permission#readme",
+  "devDependencies": {},
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "codegenConfig": {
+    "name": "RTNCameraPermissionSpec",
+    "type": "modules",
+    "jsSrcsDir": "js",
+    "android": {
+      "javaPackageName": "com.rtncamerapermission"
+    }
+  }
+}
