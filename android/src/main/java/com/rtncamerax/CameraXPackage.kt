@@ -6,10 +6,26 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 
 import java.util.Collections;
-import java.util.List;
 
 class CameraXPackage : TurboReactPackage() {
-  override fun getModule(name: String?, reactContext: ReactApplicationContext): NativeModule? = null
+  override fun getModule(name: String?, reactContext: ReactApplicationContext): NativeModule? = 
+     if (name == CameraXModule.NAME) {
+    CameraXModule(reactContext)
+   } else {
+ null
+   }
 
-  override fun getReactModuleInfoProvider(): ReactModuleInfoProvider? = null
+  override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+    mapOf(
+    CameraXModule.NAME to ReactModuleInfo(
+      CameraXModule.NAME,
+      CameraXModule.NAME,
+      false, // canOverrideExistingModule
+      false, // needsEagerInit
+      true, // hasConstants
+      false, // isCxxModule
+      true // isTurboModule     )
+   )
+    )
+  }
 }
